@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+:root{
+    --purple: #b19cd9;
+    --white: #fff;
+    --black: #1b1b1b;
+    --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    --light: #eee;
+}
+::selection{
+    color: var(--white);
+    background: var(--purple);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 10%;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+}
+.navbar .logo{
+    font-size: 3.3rem;
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: none;
+    font-family: 'PT Serif', serif;
+}
+.navbar .logo span{
+    color: var(--purple);
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li{
+    margin-left: 1rem;
+}
+.navbar ul li a{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: .6rem 1.6rem;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    color: var(--white);
+    background: var(--purple);
+}
+.navbar .menu-btn i{
+    color: var(--black);
+    font-size: 2.6rem;
+    cursor: pointer;
+    display: none;
+}
+#click{
+    display: none;
+}
+
+/* home section */
+.about{
+    background: var(--light);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .content{
+    text-align: center;
+}
+.about .content h4{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--black);
+}
+.about .content h1{
+    font-size: 8rem;
+    color: var(--purple);
+    letter-spacing: .6rem;
+    text-transform: uppercase;
+    font-family: 'PT Serif', serif;
+}
+.about .content p{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 2rem;
+}
+.about .content .btn:hover{
+    color: var(--white);
+    background: var(--black);
+} 
+.about .content .btn{
+    font-size: 2.4rem;
+    padding: .6rem 2rem;
+    color: var(--purple);
+    border: .1rem solid var(--purple);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.about .content .btn:hover{
+    color: var(--white);
+    background: var(--purple);
+}
+
+.heading{
+    color: var(--white);
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.heading span{
+    border-bottom: .1rem solid var(--black);
+}
+.title{
+    color: var(--purple);
+}
+
+/* skills section */
+.skill{
+    background: var(--purple);
+    padding: 9rem 10%;
+}
+.skill .box-container{
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+.skill .box-container .box span i{
+    font-size: 7rem;
+    color: var(--black);
+}
+.skill .box-container .box h3{
+    color: var(--white);
+    font-size: 3rem;
+}
+
+/* projects section */
+.projects{
+    min-height: 100vh;
+    background: var(--light);
+    padding: 9rem 10%;
+}
+.projects .box-container{
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 4rem;
+    text-align: center;
+}
+.projects .box-container .box{
+    padding: 2rem;
+    background: var(--white);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+}
+.projects .box-container .box:hover{
+    transform: scale(1.1);
+}
+.projects .box-container .box img{
+    height: 25rem;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.projects .box-container .box h4{
+    color: var(--purple);
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'PT Serif', serif;
+    padding: 1rem;
+    border-bottom: .2rem solid var(--light);
+}
+.projects .box-container .box p{
+    color: var(--black);
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+/* contact section */
+.contact{
+    padding: 9rem 10%;
+    background: var(--purple);
+}
+.contact .box-container {
+    padding-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+.contact .box-container .box{
+    background: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+.contact .box-container .box i{
+    color: var(--purple);
+    margin-right: .4rem;
+    text-transform: lowercase;
+}
+.contact .box-container .box h5{
+    color: var(--purple);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1.5rem;
+}
+.contact .box-container .box p{
+    color: var(--black);
+    font-size: 2.2rem;
+    text-transform: lowercase;
+    padding-bottom: 2rem;
+}
+.case{
+    text-transform: capitalize;
+}
+
+/* footer section */
+.footer{
+    background: var(--black);
+}
+.footer p{
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+.footer p span{
+    color: var(--purple);
+}
+
+/* Responsive */
+@media (max-width: 990px) {
+    .navbar{
+        padding: 1rem 7%;
+    }
+    .navbar ul{
+        position: fixed;
+        top: 7rem;
+        left: -100%;
+        background: var(--light);
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .navbar ul li{
+        margin: 4rem 0;
+    }
+    .navbar ul li a{
+        font-size: 2rem;
+        display: inline-block;
+    }
+    .navbar .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+}
+@media (max-width: 768px) {
+    html{
+        font-size: 55%;
+    }
+    .about .content{
+        margin: 2rem;
+    }
+}
+@media (max-width: 480px) {
+    html{
+        font-size: 50%;
+    }
+}
